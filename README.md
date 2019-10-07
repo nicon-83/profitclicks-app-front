@@ -1,29 +1,28 @@
-# profitclicks-app
+# profitclicks-app frontend
+опубликовано на github pages 
+https://nicon-83.github.io/profitclicks-app/
 
-## Project setup
+# Backend приложения
+https://github.com/nicon-83/profitclicks-app-back.git
+
+# База данных Postgresql на хостинге ElephantSQL
+https://customer.elephantsql.com
+
+## Установка
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Сборка для development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Сборка для production
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

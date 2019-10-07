@@ -1,31 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+		<div id="app">
+				<md-toolbar class="md-primary" style="margin-bottom: 30px;">
+						<h3 class="md-title">Телефонный справочник</h3>
+				</md-toolbar>
+				<div style="margin: 0 10px;">
+						<router-view/>
+				</div>
+
+				<md-snackbar :md-position="snackBar.position" :md-duration="snackBar.isInfinity ? Infinity : snackBar.duration" :md-active.sync="snackBar.showSnackbar"
+				             md-persistent>
+						<span>{{snackBar.snackText}}</span>
+						<md-button class="md-primary" @click="hideSnackbar()">Скрыть</md-button>
+				</md-snackbar>
+		</div>
 </template>
-
+<script>
+	export default {
+		name: "App",
+		computed: {
+			snackBar() {
+				return this.$store.state.snackBar
+			}
+		},
+		methods: {
+			hideSnackbar() {
+				this.$store.dispatch('hideSnackbar');
+			},
+		}
+	}
+</script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+		#app {
+				height: 100vh;
+				max-height: 100vh;
+				margin: 0;
+		}
 </style>
