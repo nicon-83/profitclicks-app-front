@@ -125,7 +125,7 @@
 			async deleteUser(user) {
 				try {
 					this.loading = true;
-					const response = await this.$http.delete(`https://profitclicksapi.azurewebsites.net/api/user/${user.Id}`);
+					const response = await this.$http.delete(`https://profit-clicks.herokuapp.com/api/user/${user.Id}`);
 					if (response.data.statusCode > 200) {
 						console.error(response.data.reasonPhrase);
 						this.$store.dispatch("showSnackBar", {snackText: response.data.reasonPhrase});
@@ -147,7 +147,7 @@
 			async deleteNumber(phone) {
 				try {
 					this.loading = true;
-					const response = await this.$http.delete(`https://profitclicksapi.azurewebsites.net/api/phone/${phone.Id}`);
+					const response = await this.$http.delete(`https://profit-clicks.herokuapp.com/api/phone/${phone.Id}`);
 					if (response.data.statusCode > 200) {
 						console.error(response.data.reasonPhrase);
 						this.$store.dispatch("showSnackBar", {snackText: response.data.reasonPhrase});

@@ -107,7 +107,7 @@
 				}
 			},
 			saveUser() {
-				return this.$http.post("https://profitclicksapi.azurewebsites.net/api/user", JSON.stringify({
+				return this.$http.post("https://profit-clicks.herokuapp.com/api/user", JSON.stringify({
 						FirstName: this.firstName,
 						LastName: this.lastName,
 						MiddleName: this.middleName
@@ -115,7 +115,7 @@
 					{headers: {"Content-Type": "application/json"}});
 			},
 			updateUser(userId) {
-				return this.$http.put(`https://profitclicksapi.azurewebsites.net/api/user/${userId}`, JSON.stringify({
+				return this.$http.put(`https://profit-clicks.herokuapp.com/api/user/${userId}`, JSON.stringify({
 						FirstName: this.firstName,
 						LastName: this.lastName,
 						MiddleName: this.middleName

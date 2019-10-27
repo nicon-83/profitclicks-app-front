@@ -40,7 +40,7 @@
 		props: ['dataObj'],
 		methods: {
 			addPhone(UserId, Number) {
-				return this.$http.post("https://profitclicksapi.azurewebsites.net/api/phone", JSON.stringify({
+				return this.$http.post("https://profit-clicks.herokuapp.com/api/phone", JSON.stringify({
 						Number,
 						UserId
 					}),

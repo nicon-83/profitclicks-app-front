@@ -48,7 +48,7 @@ export default new Vuex.Store({
 
 		async get_users({commit}, data) {
 			try {
-				const response = await Vue.http.get("https://profitclicksapi.azurewebsites.net/api/user");
+				const response = await Vue.http.get("https://profit-clicks.herokuapp.com/api/user");
 				commit('set_users', response.body);
 			} catch (error) {
 				console.error(error);
